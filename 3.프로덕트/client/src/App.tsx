@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import RoadMap from "./components/RoadMap";
+import {Route, Routes} from "react-router-dom";
+import MainPage from "./pages";
 
 function App() {
 
   return (
-      <><h1>hello world</h1>
-      <div>
-        <RoadMap />
-      </div>
-      </>
+      <Routes>
+          <Route path={"/"} element={<MainPage />} />
+      </Routes>
   )
 }
 
