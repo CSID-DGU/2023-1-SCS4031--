@@ -3,9 +3,7 @@ import RoadMap from "../components/RoadMap";
 const MainPage = () => {
   return (
     <>
-      <div className={"w-50"}>
-        <RoadMap />
-      </div>
+      <span>메인페이지 입니다.</span>
     </>
   );
 };

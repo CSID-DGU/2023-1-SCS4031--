@@ -1,7 +1,7 @@
 const BottomNavigationBar = () => {
   return (
     <div className="btm-nav static">
-      <button>
+      <button className="text-primary active">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -17,7 +17,7 @@ const BottomNavigationBar = () => {
           />
         </svg>
       </button>
-      <button className="active">
+      <button className="text-primary">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -33,7 +33,7 @@ const BottomNavigationBar = () => {
           />
         </svg>
       </button>
-      <button>
+      <button className="text-primary">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
