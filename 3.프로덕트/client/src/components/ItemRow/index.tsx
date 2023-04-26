@@ -17,7 +17,7 @@ const ItemRow = (props: ItemRowProps) => {
             <td>
                 <div className="flex items-center space-x-3">
                     <div>
-                        <div className="font-bold">{props.itemName}</div>
+                        <div className="font-bold w-[80px] overflow-hidden text-ellipsis">{props.itemName}</div>
                         <div className="text-sm opacity-50">{props.itemCategory}</div>
                     </div>
                 </div>
