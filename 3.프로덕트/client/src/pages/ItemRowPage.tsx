@@ -7,13 +7,10 @@ const ItemRowPage = () => {
             <thead>
             <tr>
               <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
               </th>
               <th>상품명</th>
               <th>주소</th>
-              <th>Favorite Color</th>
+              <th>배송 일자</th>
               <th></th>
             </tr>
             </thead>
@@ -38,7 +35,7 @@ const ItemRowPage = () => {
                 <br/>
                 <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
               </td>
-              <td>Purple</td>
+              <td>23.03.31</td>
               <th>
                 <button className="btn btn-ghost btn-xs">details</button>
               </th>
@@ -63,7 +60,7 @@ const ItemRowPage = () => {
                 <br/>
                 <span className="badge badge-ghost badge-sm">Tax Accountant</span>
               </td>
-              <td>Red</td>
+              <td>23.03.31</td>
               <th>
                 <button className="btn btn-ghost btn-xs">details</button>
               </th>
@@ -88,7 +85,7 @@ const ItemRowPage = () => {
                 <br/>
                 <span className="badge badge-ghost badge-sm">Office Assistant I</span>
               </td>
-              <td>Crimson</td>
+              <td>23.03.31</td>
               <th>
                 <button className="btn btn-ghost btn-xs">details</button>
               </th>
@@ -113,7 +110,7 @@ const ItemRowPage = () => {
                 <br/>
                 <span className="badge badge-ghost badge-sm">Community Outreach Specialist</span>
               </td>
-              <td>Indigo</td>
+              <td>23.03.31</td>
               <th>
                 <button className="btn btn-ghost btn-xs">details</button>
               </th>
@@ -125,7 +122,7 @@ const ItemRowPage = () => {
               <th></th>
               <th>상품명</th>
               <th>주소</th>
-              <th>Favorite Color</th>
+              <th>배송일자</th>
               <th></th>
             </tr>
             </tfoot>
