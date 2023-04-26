@@ -1,4 +1,4 @@
-import DefaultProfileImg from "../../../public/Image/DefaultProfileImg.png";
+import DefaultProfileImg from "/Image/DefaultProfileImg.png";
 import { useNavigate, useNavigation } from "react-router-dom";
 import * as events from "events";
 import { EventHandler } from "react";
