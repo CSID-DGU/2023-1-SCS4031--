@@ -1,6 +1,30 @@
-import DefaultProfileImg from "../../../public/Image/DefaultProfileImg.png";
+import DefaultProfileImg from "/Image/DefaultProfileImg.png";
+import { useNavigate, useNavigation } from "react-router-dom";
+import * as events from "events";
+import { EventHandler } from "react";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleClickEvent = (e: any) => {
+    const targetPage = e.target.text;
+
+    switch (targetPage) {
+      case "홈":
+        return navigate("/");
+      case "2In":
+        return navigate("/");
+      case "지도":
+        return navigate("/map");
+      case "지역 목록":
+        return navigate("/area");
+      case "상품 리스트":
+        return navigate("/item");
+      default:
+        return;
+    }
+  };
+
   return (
     <div className="navbar bg-base-100 z-30">
       <div className="navbar-start">
@@ -24,20 +48,24 @@ const Header = () => {
           <ul
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-2-0"
+            onClick={handleClickEvent}
           >
             <li>
-              <a>Map</a>
+              <a>홈</a>
             </li>
             <li>
-              <a>TodoList</a>
+              <a>지도</a>
             </li>
             <li>
-              <a>???</a>
+              <a>지역 목록</a>
+            </li>
+            <li>
+              <a>상품 리스트</a>
             </li>
           </ul>
         </div>
       </div>
-      <div className="navbar-center">
+      <div className="navbar-center" onClick={handleClickEvent}>
         <a className="btn btn-ghost normal-case text-xl ml-9">2In</a>
       </div>
       <div className="navbar-end">

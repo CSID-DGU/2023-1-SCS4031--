@@ -1,7 +1,11 @@
-const MapPage = () => {
-    return(
-        <h1>Map</h1>
-    )
-}
+import RoadMap from "../components/RoadMap";
 
-export default MapPage
+const MapPage = () => {
+  return (
+    <>
+      <RoadMap />
+    </>
+  );
+};
+
+export default MapPage;

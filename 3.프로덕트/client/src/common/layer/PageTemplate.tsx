@@ -5,10 +5,12 @@ import BottomNavigationBar from "../../components/BottomNavigationBar";
 
 const PageTemplate = () => {
   return (
-    <main className="relative m-auto grid min-h-screen bg-[#c0c0c0] w-full max-w-full grid-rows-header-footer text-grey-300 sm:max-w-md">
+    <main className="relative m-auto grid min-h-screen bg-[#F9F9F9] w-full max-w-full grid-rows-header-footer sm:max-w-md">
       <Header />
-      <Outlet />
-      <BottomNavigationBar />
+      <div className={"m-4 overflow-hidden"}>
+        <Outlet />
+      </div>
+      {/*<BottomNavigationBar />*/}
     </main>
   );
 };
