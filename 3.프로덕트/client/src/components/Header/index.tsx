@@ -12,6 +12,8 @@ const Header = () => {
     switch (targetPage) {
       case "홈":
         return navigate("/");
+      case "2In":
+        return navigate("/");
       case "지도":
         return navigate("/map");
       case "지역 목록":
@@ -63,7 +65,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <div className="navbar-center">
+      <div className="navbar-center" onClick={handleClickEvent}>
         <a className="btn btn-ghost normal-case text-xl ml-9">2In</a>
       </div>
       <div className="navbar-end">
