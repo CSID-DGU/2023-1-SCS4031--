@@ -114,9 +114,10 @@ const RoadMap = (): JSX.Element => {
             animation={2}
             title={data.station}
             icon={{
-              content: `<button class="markerBox">
-                <div class="totalOrder">${data.order}</div>
-                ${data.station}</button>`,
+              content: `<div class="indicator">
+                        <span class="indicator-item badge badge-primary">${data.order}</span> 
+                        <button class="btn">${data.station}</button>
+                        </div>`,
             }}
           />
         ))}
