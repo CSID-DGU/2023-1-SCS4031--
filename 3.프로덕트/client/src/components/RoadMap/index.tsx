@@ -8,7 +8,7 @@ import {
   useNavermaps,
 } from "react-naver-maps";
 
-const RoadMap = () => {
+const RoadMap = (): JSX.Element => {
   const naverMaps = useNavermaps();
 
   const [myData, setMyData] = useState<any>([]);
@@ -95,8 +95,6 @@ const RoadMap = () => {
       },
     ]);
   }, []);
-
-  if (myData.length === 0) return;
 
   return (
     <MapDiv
