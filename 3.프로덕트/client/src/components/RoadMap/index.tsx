@@ -8,7 +8,7 @@ import {
   useNavermaps,
 } from "react-naver-maps";
 
-const RoadMap = () => {
+const RoadMap = (): JSX.Element => {
   const naverMaps = useNavermaps();
 
   const [myData, setMyData] = useState<any>([]);
@@ -96,8 +96,6 @@ const RoadMap = () => {
     ]);
   }, []);
 
-  if (myData.length === 0) return;
-
   return (
     <MapDiv
       style={{
@@ -116,9 +114,10 @@ const RoadMap = () => {
             animation={2}
             title={data.station}
             icon={{
-              content: `<button class="markerBox">
-                <div class="totalOrder">${data.order}</div>
-                ${data.station}</button>`,
+              content: `<div class="indicator">
+                        <span class="indicator-item badge badge-primary">${data.order}</span> 
+                        <button class="btn">${data.station}</button>
+                        </div>`,
             }}
           />
         ))}
