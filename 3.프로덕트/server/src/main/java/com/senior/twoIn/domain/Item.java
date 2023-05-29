@@ -22,9 +22,17 @@ public class Item extends BaseTime{
     @Column(nullable = false)
     private String address;
 
+    @Column
+    private boolean deliveryStatus;
+
+    @Column
+    private String index_x;
+
+    @Column
+    private String index_y;
+
     @ManyToOne
     @JoinColumn(name = "CLUSTER_ID")
-    private Cluster cluster;
-
+    private Cluster cluster_id;
 
 }

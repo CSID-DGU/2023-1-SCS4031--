@@ -20,40 +20,42 @@ public class Cluster extends BaseTime{
     private Long id;
 
     @Column(nullable = false)
-    private Double indexY;
+    private Double index_y;
 
     @Column(nullable = false)
-    private Double indexX;
+    private Double index_x;
 
-    @Column(nullable = false, columnDefinition = "CHAR(1) DEFAULT 'N'")
-    @Type(type = "yes_no")
-    private boolean isDelivery;
+    @Column(nullable = false)
+    private int item_num;
+
+
+    @Column(nullable = false)
+    private String average_dist;
+
+    @Column(nullable = false)
+    private String total_dist;
+
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private DelivererTypeEnum deliverType;
 
     @Column(nullable = false)
-    private Long deliveryOrder;
+    private int deliverOrder;
 
-    @ManyToOne
-    @JoinColumn(name = "USER_ID")
-    private User user;
-
-    @OneToMany(mappedBy = "cluster")
+    @OneToMany(mappedBy =  "cluster_id")
     private List<Item> items;
 
 
     @Builder
-    public Cluster(Double indexX, Double indexY, DelivererTypeEnum deliverType, Long deliveryOrder){
-        this.indexX = indexX;
-        this.indexY = indexY;
+    public Cluster(Double indexX, Double indexY, int item_num, String average_dist, String total_dist, DelivererTypeEnum deliverType, int deliveryOrder){
+        this.index_x = indexX;
+        this.index_y = indexY;
+        this.item_num = item_num;
+        this.average_dist = average_dist;
+        this.total_dist = total_dist;
         this.deliverType = deliverType;
-        this.deliveryOrder = deliveryOrder;
-    }
-
-    public void deliveryDone(boolean isDelivery){
-        this.isDelivery = true;
+        this.deliverOrder = deliveryOrder;
     }
 
 }
