@@ -5,17 +5,15 @@ interface FilterCheckBoxProps {
 
 const FilterCheckBox = ({ OptionName, OnClickEvent }: FilterCheckBoxProps) => {
   return (
-    <div>
-      <div className="form-control">
-        <label className="label cursor-pointer">
-          <span className="label-text">{OptionName}</span>
-          <input
-            type="checkbox"
-            className="checkbox checkbox-primary"
-            onChange={OnClickEvent}
-          />
-        </label>
-      </div>
+    <div className="form-control w-full">
+      <label className="label cursor-pointer">
+        <span className="label-text">{OptionName}</span>
+        <input
+          type="checkbox"
+          className="checkbox checkbox-primary"
+          onChange={OnClickEvent}
+        />
+      </label>
     </div>
   );
 };

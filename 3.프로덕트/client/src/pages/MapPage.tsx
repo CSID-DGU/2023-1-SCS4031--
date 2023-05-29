@@ -5,14 +5,26 @@ const MapPage = () => {
   return (
     <>
       <RoadMap />
-      <div>
-        <FilterCheckBox
-          OptionName={"test"}
-          OnClickEvent={() => {
-            console.log("test");
-          }}
-        />
-      </div>
+      {/*<div className={"flex mt-10"}>*/}
+      {/*  <FilterCheckBox*/}
+      {/*    OptionName={"거리"}*/}
+      {/*    OnClickEvent={() => {*/}
+      {/*      console.log("test");*/}
+      {/*    }}*/}
+      {/*  />*/}
+      {/*  <FilterCheckBox*/}
+      {/*    OptionName={"업무량"}*/}
+      {/*    OnClickEvent={() => {*/}
+      {/*      console.log("test");*/}
+      {/*    }}*/}
+      {/*  />*/}
+      {/*  <FilterCheckBox*/}
+      {/*    OptionName={"업무강도"}*/}
+      {/*    OnClickEvent={() => {*/}
+      {/*      console.log("test");*/}
+      {/*    }}*/}
+      {/*  />*/}
+      {/*</div>*/}
     </>
   );
 };
