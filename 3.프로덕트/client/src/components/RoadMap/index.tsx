@@ -25,7 +25,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "1.577404873387422e-09",
         total_dist: "2.366107310081134e-08",
         deliver_type: 2,
-        deliver_order: 49,
+        deliver_order: 8,
       },
       {
         cluster_id: 1,
@@ -36,7 +36,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "16.91682072510464",
         total_dist: "101.5009243506278",
         deliver_type: 2,
-        deliver_order: 2,
+        deliver_order: 39,
       },
       {
         cluster_id: 2,
@@ -47,7 +47,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 3,
+        deliver_order: 49,
       },
       {
         cluster_id: 3,
@@ -58,7 +58,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "19.37528811091373",
         total_dist: "96.87644055456866",
         deliver_type: 2,
-        deliver_order: 33,
+        deliver_order: 46,
       },
       {
         cluster_id: 4,
@@ -69,7 +69,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "14.28461212148022",
         total_dist: "57.13844848592088",
         deliver_type: 1,
-        deliver_order: 28,
+        deliver_order: 20,
       },
       {
         cluster_id: 5,
@@ -80,7 +80,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "10.23949087908351",
         total_dist: "40.95796351633405",
         deliver_type: 1,
-        deliver_order: 0,
+        deliver_order: 35,
       },
       {
         cluster_id: 6,
@@ -91,7 +91,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "3.216177331048084e-09",
         total_dist: "2.572941864838467e-08",
         deliver_type: 2,
-        deliver_order: 31,
+        deliver_order: 1,
       },
       {
         cluster_id: 7,
@@ -102,7 +102,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.4733860380937562",
         total_dist: "2.366930190468781",
         deliver_type: 1,
-        deliver_order: 18,
+        deliver_order: 5,
       },
       {
         cluster_id: 8,
@@ -113,7 +113,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "23.37427524213176",
         total_dist: "140.2456514527906",
         deliver_type: 2,
-        deliver_order: 22,
+        deliver_order: 44,
       },
       {
         cluster_id: 9,
@@ -124,7 +124,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "18.4737154098873",
         total_dist: "92.36857704943648",
         deliver_type: 1,
-        deliver_order: 41,
+        deliver_order: 25,
       },
       {
         cluster_id: 10,
@@ -135,7 +135,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "23.48061995614073",
         total_dist: "70.44185986842218",
         deliver_type: 1,
-        deliver_order: 24,
+        deliver_order: 17,
       },
       {
         cluster_id: 11,
@@ -147,7 +147,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "5.54612604230856",
         total_dist: "66.55351250770272",
         deliver_type: 2,
-        deliver_order: 34,
+        deliver_order: 12,
       },
       {
         cluster_id: 12,
@@ -158,7 +158,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "12.44097361322298",
         total_dist: "87.08681529256087",
         deliver_type: 2,
-        deliver_order: 9,
+        deliver_order: 11,
       },
       {
         cluster_id: 13,
@@ -169,7 +169,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "23.61614875578723",
         total_dist: "94.4645950231489",
         deliver_type: 1,
-        deliver_order: 13,
+        deliver_order: 45,
       },
       {
         cluster_id: 14,
@@ -180,7 +180,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "16.73071988708418",
         total_dist: "83.65359943542093",
         deliver_type: 1,
-        deliver_order: 17,
+        deliver_order: 32,
       },
       {
         cluster_id: 15,
@@ -191,7 +191,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 40,
+        deliver_order: 28,
       },
       {
         cluster_id: 16,
@@ -202,7 +202,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 10,
+        deliver_order: 2,
       },
       {
         cluster_id: 17,
@@ -213,7 +213,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 35,
+        deliver_order: 3,
       },
       {
         cluster_id: 18,
@@ -224,7 +224,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "15.22933824755844",
         total_dist: "60.91735299023376",
         deliver_type: 1,
-        deliver_order: 21,
+        deliver_order: 16,
       },
       {
         cluster_id: 19,
@@ -235,7 +235,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "23.05759963805858",
         total_dist: "115.2879981902929",
         deliver_type: 2,
-        deliver_order: 20,
+        deliver_order: 43,
       },
       {
         cluster_id: 20,
@@ -246,7 +246,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "12.83097045644281",
         total_dist: "76.98582273865688",
         deliver_type: 2,
-        deliver_order: 16,
+        deliver_order: 26,
       },
       {
         cluster_id: 21,
@@ -268,7 +268,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "16.98737691748291",
         total_dist: "84.93688458741453",
         deliver_type: 1,
-        deliver_order: 27,
+        deliver_order: 30,
       },
       {
         cluster_id: 23,
@@ -290,7 +290,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "22.98552498987505",
         total_dist: "45.97104997975011",
         deliver_type: 1,
-        deliver_order: 48,
+        deliver_order: 22,
       },
       {
         cluster_id: 25,
@@ -301,7 +301,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "13.81956753979462",
         total_dist: "82.91740523876774",
         deliver_type: 2,
-        deliver_order: 45,
+        deliver_order: 47,
       },
       {
         cluster_id: 26,
@@ -312,7 +312,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "16.09958191705739",
         total_dist: "80.49790958528692",
         deliver_type: 1,
-        deliver_order: 5,
+        deliver_order: 14,
       },
       {
         cluster_id: 27,
@@ -323,7 +323,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "22.52938887433835",
         total_dist: "90.1175554973534",
         deliver_type: 1,
-        deliver_order: 4,
+        deliver_order: 48,
       },
       {
         cluster_id: 28,
@@ -334,7 +334,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 38,
+        deliver_order: 41,
       },
       {
         cluster_id: 29,
@@ -345,7 +345,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "10.6901274960439",
         total_dist: "32.07038248813171",
         deliver_type: 1,
-        deliver_order: 29,
+        deliver_order: 9,
       },
       {
         cluster_id: 30,
@@ -356,7 +356,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "20.32340817150775",
         total_dist: "81.293632686031",
         deliver_type: 1,
-        deliver_order: 6,
+        deliver_order: 27,
       },
       {
         cluster_id: 31,
@@ -367,7 +367,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "14.81457144829369",
         total_dist: "103.7020001380558",
         deliver_type: 2,
-        deliver_order: 14,
+        deliver_order: 37,
       },
       {
         cluster_id: 32,
@@ -378,7 +378,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "11.5566263491026",
         total_dist: "57.783131745513",
         deliver_type: 1,
-        deliver_order: 32,
+        deliver_order: 6,
       },
       {
         cluster_id: 33,
@@ -389,7 +389,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "21.93429662240845",
         total_dist: "109.6714831120423",
         deliver_type: 2,
-        deliver_order: 30,
+        deliver_order: 42,
       },
       {
         cluster_id: 34,
@@ -401,7 +401,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "1.577404873387422e-09",
         total_dist: "2.366107310081134e-08",
         deliver_type: 2,
-        deliver_order: 25,
+        deliver_order: 7,
       },
       {
         cluster_id: 35,
@@ -412,7 +412,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "19.284829200815",
         total_dist: "57.85448760244498",
         deliver_type: 1,
-        deliver_order: 46,
+        deliver_order: 13,
       },
       {
         cluster_id: 36,
@@ -423,7 +423,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 42,
+        deliver_order: 33,
       },
       {
         cluster_id: 37,
@@ -434,7 +434,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "7.583023726469207",
         total_dist: "53.08116608528445",
         deliver_type: 2,
-        deliver_order: 15,
+        deliver_order: 19,
       },
       {
         cluster_id: 38,
@@ -445,7 +445,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 43,
+        deliver_order: 10,
       },
       {
         cluster_id: 39,
@@ -456,7 +456,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "22.60531554166236",
         total_dist: "113.0265777083118",
         deliver_type: 2,
-        deliver_order: 26,
+        deliver_order: 15,
       },
       {
         cluster_id: 40,
@@ -467,7 +467,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 47,
+        deliver_order: 0,
       },
       {
         cluster_id: 41,
@@ -478,7 +478,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "10.69741944990113",
         total_dist: "53.48709724950565",
         deliver_type: 1,
-        deliver_order: 39,
+        deliver_order: 29,
       },
       {
         cluster_id: 42,
@@ -489,7 +489,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "9.74533719335856",
         total_dist: "29.23601158007568",
         deliver_type: 1,
-        deliver_order: 44,
+        deliver_order: 34,
       },
       {
         cluster_id: 43,
@@ -500,7 +500,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "10.96250619177835",
         total_dist: "43.85002476711341",
         deliver_type: 1,
-        deliver_order: 19,
+        deliver_order: 21,
       },
       {
         cluster_id: 44,
@@ -511,7 +511,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "1.05621975688441",
         total_dist: "5.281098784422051",
         deliver_type: 1,
-        deliver_order: 11,
+        deliver_order: 4,
       },
       {
         cluster_id: 45,
@@ -522,7 +522,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "30.47660086035162",
         total_dist: "91.42980258105489",
         deliver_type: 1,
-        deliver_order: 37,
+        deliver_order: 40,
       },
       {
         cluster_id: 46,
@@ -533,7 +533,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "17.96248575222006",
         total_dist: "35.92497150444012",
         deliver_type: 1,
-        deliver_order: 1,
+        deliver_order: 18,
       },
       {
         cluster_id: 47,
@@ -544,7 +544,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "5.516136354426282",
         total_dist: "27.58068177213141",
         deliver_type: 1,
-        deliver_order: 12,
+        deliver_order: 38,
       },
       {
         cluster_id: 48,
@@ -555,7 +555,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 8,
+        deliver_order: 24,
       },
       {
         cluster_id: 49,
@@ -566,7 +566,7 @@ const RoadMap = (): JSX.Element => {
         average_dist: "0.0",
         total_dist: "0.0",
         deliver_type: 1,
-        deliver_order: 7,
+        deliver_order: 31,
       },
     ]);
   }, []);
