@@ -20,6 +20,10 @@ const WrapperRouter = ({ children }: { children: ReactNode }) => {
     return <BrowserRouter>{children}</BrowserRouter>
 }
 
+// msw
+const { worker } = await import('./mocks/browsers');
+worker.start();
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
