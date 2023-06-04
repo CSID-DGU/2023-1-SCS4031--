@@ -1,9 +1,10 @@
 import ItemTable from "../components/ItemTable";
 import ItemRow from "../components/ItemRow";
 import { useEffect, useState } from "react";
+import useItemListByTime from "../hooks/query/useItemListByTime";
 
 const ItemRowPage = () => {
-  const [itemList, setItemList] = useState<any[]>();
+  const itemList = useItemListByTime();
 
   return (
     <>
