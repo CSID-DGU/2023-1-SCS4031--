@@ -1,5 +1,5 @@
 import axios from "axios";
-import HttpClient from "../HttpClient";
+import HttpClient from "../service/HttpClient";
 
 const ItemAPI = {
   getItemListByTime: async () => {
