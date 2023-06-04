@@ -7,7 +7,7 @@ const useItemListByTime = () => {
     ItemAPI.getItemListByTime()
   );
 
-  return { itemListByTime: data };
+  return [{ itemListByTime: data }];
 };
 
 export default useItemListByTime;

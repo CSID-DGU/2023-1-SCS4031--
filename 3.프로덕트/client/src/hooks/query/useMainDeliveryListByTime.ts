@@ -7,7 +7,7 @@ const useMainDeliveryListByTime = () => {
     MainDeliveryAPI.getListByItem()
   );
 
-  return { mainDeliveryList: data };
+  return [{ mainDeliveryList: data }];
 };
 
 export default useMainDeliveryListByTime;

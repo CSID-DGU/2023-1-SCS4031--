@@ -7,7 +7,7 @@ const useSubDeliveryListByTime = () => {
     SubDeliveryAPI.getListByItem()
   );
 
-  return { subDeliveryList: data };
+  return [{ subDeliveryList: data }];
 };
 
 export default useSubDeliveryListByTime;

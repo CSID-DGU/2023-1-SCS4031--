@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import useItemListByTime from "../hooks/query/useItemListByTime";
 
 const ItemRowPage = () => {
-  const itemList = useItemListByTime();
+  const [itemList] = useItemListByTime();
 
   return (
     <>

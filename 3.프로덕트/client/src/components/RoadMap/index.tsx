@@ -7,15 +7,16 @@ import {
   Container as MapDiv,
   useNavermaps,
 } from "react-naver-maps";
+import useMainDeliveryListByTime from "../../hooks/query/useMainDeliveryListByTime";
+import useSubDeliveryListByTime from "../../hooks/query/useSubDeliveryListByTime";
 
 const RoadMap = (): JSX.Element => {
   const naverMaps = useNavermaps();
 
   const [myData, setMyData] = useState<any>([]);
 
-  useEffect(() => {
-    // setMyData();
-  }, []);
+  const [mainDeliveryData] = useMainDeliveryListByTime();
+  const [subDeliveryData] = useSubDeliveryListByTime();
 
   return (
     <MapDiv
