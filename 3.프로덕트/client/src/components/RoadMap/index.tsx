@@ -9,14 +9,20 @@ import {
 } from "react-naver-maps";
 import useMainDeliveryListByTime from "../../hooks/query/useMainDeliveryListByTime";
 import useSubDeliveryListByTime from "../../hooks/query/useSubDeliveryListByTime";
+import MapPin from "../MapMarker";
 
 const RoadMap = (): JSX.Element => {
   const naverMaps = useNavermaps();
 
   const [myData, setMyData] = useState<any>([]);
 
-  const [mainDeliveryData] = useMainDeliveryListByTime();
-  const [subDeliveryData] = useSubDeliveryListByTime();
+  const [{ mainDeliveryList }] = useMainDeliveryListByTime();
+  const [{ subDeliveryList }] = useSubDeliveryListByTime();
+
+  useEffect(() => {
+    console.log(mainDeliveryList);
+    console.log(subDeliveryList);
+  });
 
   return (
     <MapDiv
@@ -29,24 +35,30 @@ const RoadMap = (): JSX.Element => {
         defaultCenter={{ lat: 37.7357597, lng: 127.047849 }}
         defaultZoom={16}
       >
-        {myData.map((data: any) => (
-          <Marker
-            key={data.cluster_id}
-            position={new naverMaps.LatLng(data.index_y, data.index_x)}
-            animation={2}
-            title={data.deliver_order}
-            icon={{
-              content: `<div class="indicator">
-                            <span class="indicator-item badge ${
-                              data.deliver_type === 1
-                                ? "badge-primary"
-                                : "badge-accent"
-                            }">${data.item_num}</span> 
-                            <button class="btn">${data.deliver_order}</button>
-                        </div>`,
-            }}
-          />
-        ))}
+        {mainDeliveryList &&
+          mainDeliveryList.map((data: any) => (
+            <MapPin
+              key={data.cluster_id}
+              cluster_id={data.cluster_id}
+              index_y={data.index_y}
+              index_x={data.index_x}
+              deliver_type={data.deliver_type}
+              item_num={data.item_num}
+              deliver_order={data.deliver_order}
+            />
+          ))}
+        {subDeliveryList &&
+          subDeliveryList.map((data: any) => (
+            <MapPin
+              key={data.cluster_id}
+              cluster_id={data.cluster_id}
+              index_y={data.index_y}
+              index_x={data.index_x}
+              deliver_type={data.deliver_type}
+              item_num={data.item_num}
+              deliver_order={data.deliver_order}
+            />
+          ))}
       </NaverMap>
     </MapDiv>
   );
