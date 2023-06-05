@@ -18,7 +18,6 @@ const MapMarker = (props: MapMarkerProps) => {
     <Marker
       key={props.cluster_id}
       position={new naverMaps.LatLng(props.index_y, props.index_x)}
-      animation={2}
       title={props.deliver_order}
       icon={{
         content: `<div class="indicator">

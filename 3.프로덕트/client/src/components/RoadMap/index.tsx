@@ -11,10 +11,16 @@ import useMainDeliveryListByTime from "../../hooks/query/useMainDeliveryListByTi
 import useSubDeliveryListByTime from "../../hooks/query/useSubDeliveryListByTime";
 import MapPin from "../MapMarker";
 
-const RoadMap = (): JSX.Element => {
-  const naverMaps = useNavermaps();
+interface RoadMapProps {
+  isMainVisible: boolean;
+  isSubVisible: boolean;
+}
 
-  const [myData, setMyData] = useState<any>([]);
+const RoadMap = ({
+  isMainVisible,
+  isSubVisible,
+}: RoadMapProps): JSX.Element => {
+  const naverMaps = useNavermaps();
 
   const [{ mainDeliveryList }] = useMainDeliveryListByTime();
   const [{ subDeliveryList }] = useSubDeliveryListByTime();
@@ -35,7 +41,8 @@ const RoadMap = (): JSX.Element => {
         defaultCenter={{ lat: 37.7357597, lng: 127.047849 }}
         defaultZoom={16}
       >
-        {mainDeliveryList &&
+        {isMainVisible &&
+          mainDeliveryList &&
           mainDeliveryList.map((data: any) => (
             <MapPin
               key={data.cluster_id}
@@ -47,7 +54,8 @@ const RoadMap = (): JSX.Element => {
               deliver_order={data.deliver_order}
             />
           ))}
-        {subDeliveryList &&
+        {isSubVisible &&
+          subDeliveryList &&
           subDeliveryList.map((data: any) => (
             <MapPin
               key={data.cluster_id}
