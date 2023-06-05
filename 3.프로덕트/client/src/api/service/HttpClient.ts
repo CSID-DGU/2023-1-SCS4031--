@@ -1,4 +1,4 @@
-import apiConfig from "./apiConfig";
+import apiConfig from "../config/apiConfig";
 
 const HttpClient = {
   get: (url: string, params?: any) => {
