@@ -6,8 +6,11 @@ import MapPage from "./pages/MapPage";
 import ItemRowPage from "./pages/ItemRowPage";
 import AreaInfoPage from "./pages/AreaInfoPage";
 import { NavermapsProvider } from "react-naver-maps";
+import { worker } from "./mocks/browsers";
 
 function App() {
+  worker.start();
+
   return (
     <RecoilRoot>
       <NavermapsProvider ncpClientId={`${import.meta.env.VITE_NAVER_MAP_ID}`}>
