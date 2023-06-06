@@ -1,6 +1,7 @@
 import RoadMap from "../components/RoadMap";
 import FilterCheckBox from "../components/FilterCheckBox";
 import { useState } from "react";
+import IntroductoryRemark from "../components/IntroductoryRemark";
 
 const MapPage = () => {
   const [mainVisible, setMainVisible] = useState(true);
@@ -9,6 +10,7 @@ const MapPage = () => {
   return (
     <>
       <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible} />
+      <IntroductoryRemark />
       <div className={"flex mt-10"}>
         <FilterCheckBox
           OptionName={"주기사"}
@@ -23,6 +25,7 @@ const MapPage = () => {
           OnClickEvent={() => {
             setSubVisible(!subVisible);
           }}
+          isSub={true}
         />
       </div>
       <div>
@@ -46,6 +49,9 @@ const MapPage = () => {
             }}
           />
         </div>
+      </div>
+      <div>
+            여기에 메모
       </div>
     </>
   );

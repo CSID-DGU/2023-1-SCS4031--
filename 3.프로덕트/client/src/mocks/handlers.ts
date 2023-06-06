@@ -23,7 +23,7 @@ export const handlers = [
     })
 ]
 
-async function sleep(timeout) {
+async function sleep(timeout: any) {
     return new Promise((resolve) => {
         setTimeout(resolve, timeout);
     })
