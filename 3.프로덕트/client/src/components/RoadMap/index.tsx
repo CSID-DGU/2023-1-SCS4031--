@@ -34,7 +34,7 @@ const RoadMap = ({
     <MapDiv
       style={{
         width: "100%",
-        height: "600px",
+        height: "500px",
       }}
     >
       <NaverMap
