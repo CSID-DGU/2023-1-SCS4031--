@@ -51,7 +51,10 @@ const MapPage = () => {
         </div>
       </div>
       <div>
-            여기에 메모
+          <label className="label">
+              <span className="label-text">메모</span>
+          </label>
+          <textarea className="textarea textarea-primary w-full" placeholder="메모를 입력해주세요"></textarea>
       </div>
     </>
   );
