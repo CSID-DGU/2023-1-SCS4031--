@@ -7,6 +7,7 @@ import ItemRowPage from "./pages/ItemRowPage";
 import AreaInfoPage from "./pages/AreaInfoPage";
 import { NavermapsProvider } from "react-naver-maps";
 import { worker } from "./mocks/browsers";
+import React from "react";
 
 function App() {
   worker.start();
