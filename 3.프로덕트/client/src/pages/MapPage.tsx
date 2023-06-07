@@ -2,56 +2,52 @@ import RoadMap from "../components/RoadMap";
 import FilterCheckBox from "../components/FilterCheckBox";
 import { useState } from "react";
 import IntroductoryRemark from "../components/IntroductoryRemark";
+import useModal from "../hooks/useModal";
+import MapCustomModal from "../components/Modal/MapCustomModal";
 
 const MapPage = () => {
   const [mainVisible, setMainVisible] = useState(true);
   const [subVisible, setSubVisible] = useState(true);
 
+  const { modalState, closeModal, openModal } = useModal();
+
+  const handleOpenModal = () => {
+    openModal({
+      title: "지도 보기 설정",
+      content: (
+        <MapCustomModal
+          mainVisible={mainVisible}
+          subVisible={subVisible}
+          setMainVisible={setMainVisible}
+          setSubVisible={setSubVisible}
+        />
+      ),
+    });
+  };
+
   return (
     <>
+      <MapCustomModal
+        mainVisible={mainVisible}
+        subVisible={subVisible}
+        setMainVisible={setMainVisible}
+        setSubVisible={setSubVisible}
+      />
       <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible} />
-      <IntroductoryRemark />
-      <div className={"flex mt-10"}>
-        <FilterCheckBox
-          OptionName={"주기사"}
-          isChecked={mainVisible}
-          OnClickEvent={() => {
-            setMainVisible(!mainVisible);
-          }}
-        />
-        <FilterCheckBox
-          OptionName={"보조기사"}
-          isChecked={subVisible}
-          OnClickEvent={() => {
-            setSubVisible(!subVisible);
-          }}
-          isSub={true}
-        />
+      <div className={"w-full text-right mt-5 flex"}>
+        <IntroductoryRemark />
+        <button className={"btn btn-primary w-40"} onClick={handleOpenModal}>
+          옵션
+        </button>
       </div>
       <div>
-        <div className={"flex mt-10"}>
-          <FilterCheckBox
-            OptionName={"거리"}
-            OnClickEvent={() => {
-              console.log("test");
-            }}
-          />
-          <FilterCheckBox
-            OptionName={"업무량"}
-            OnClickEvent={() => {
-              console.log("test");
-            }}
-          />
-          <FilterCheckBox
-            OptionName={"업무강도"}
-            OnClickEvent={() => {
-              console.log("test");
-            }}
-          />
-        </div>
-      </div>
-      <div>
-            여기에 메모
+        <label className="label">
+          <span className="label-text">메모</span>
+        </label>
+        <textarea
+          className="textarea textarea-primary w-full"
+          placeholder="메모를 입력해주세요"
+        ></textarea>
       </div>
     </>
   );
