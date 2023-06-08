@@ -30,6 +30,10 @@ const RoadMap = ({
   const [{ subDeliveryList }] = useSubDeliveryListByTime();
   const [{ itemListById }] = useItemListById(visibleItemIndex);
 
+  useEffect(() => {
+    console.log(itemListById)
+  })
+
   return (
     <MapDiv
       style={{
@@ -71,7 +75,7 @@ const RoadMap = ({
             />
           ))}
         { visibleItemIndex !== '-1' &&
-            itemListById && typeof itemListById === typeof [] &&
+            itemListById && itemListById.length() > 0 &&
           itemListById.map((data: any) => {
             return <ItemMarker key={data.id} item_id={data.id} index_y={data.index_y} index_x={data.index_x}/>
           })

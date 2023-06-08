@@ -9,7 +9,7 @@ const ItemAPI = {
 
       return response;
     } catch (e) {
-      return [{}]
+      return []
     }
   },
 };
