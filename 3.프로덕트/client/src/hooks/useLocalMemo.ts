@@ -4,11 +4,13 @@ const useLocalMemo = () => {
   if (!localMemo) {
     localStorage.setItem("textAreaValue", "");
   }
-  const setLocalMemo = (value: string) => {
-    localStorage.setItem("textAreaValue", value);
+  const setLocalMemo: (value: string | null) => void = (
+    value: string | null
+  ) => {
+    localStorage.setItem("textAreaValue", value || "");
   };
 
-  return [localMemo as string, setLocalMemo];
+  return [localMemo as string, setLocalMemo as any];
 };
 
 export default useLocalMemo;

@@ -1,5 +1,5 @@
 import RoadMap from "../components/RoadMap";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import IntroductoryRemark from "../components/IntroductoryRemark";
 import useModal from "../hooks/useModal";
 import MapCustomModal from "../components/Modal/MapCustomModal";
@@ -26,9 +26,13 @@ const MapPage = () => {
     });
   };
 
-  const handleChangeTextArea = debounce((event) => {
-    setLocalMemo(event.target.value);
-  }, 500);
+  const handleChangeTextArea = debounce(
+    (event: ChangeEvent<HTMLTextAreaElement>) => {
+      const textAreaValue: string = event.target.value as string;
+      setLocalMemo(textAreaValue);
+    },
+    500
+  );
 
   return (
     <>
