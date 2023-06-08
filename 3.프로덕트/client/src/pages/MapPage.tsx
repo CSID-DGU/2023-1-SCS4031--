@@ -1,15 +1,16 @@
 import RoadMap from "../components/RoadMap";
-import FilterCheckBox from "../components/FilterCheckBox";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import IntroductoryRemark from "../components/IntroductoryRemark";
 import useModal from "../hooks/useModal";
 import MapCustomModal from "../components/Modal/MapCustomModal";
+import { debounce } from "lodash";
+import useLocalMemo from "../hooks/useLocalMemo";
 
 const MapPage = () => {
   const [mainVisible, setMainVisible] = useState(true);
   const [subVisible, setSubVisible] = useState(true);
-
-  const { modalState, closeModal, openModal } = useModal();
+  const [localMemo, setLocalMemo] = useLocalMemo();
+  const { openModal } = useModal();
 
   const handleOpenModal = () => {
     openModal({
@@ -24,6 +25,14 @@ const MapPage = () => {
       ),
     });
   };
+
+  const handleChangeTextArea = debounce(
+    (event: ChangeEvent<HTMLTextAreaElement>) => {
+      const textAreaValue: string = event.target.value as string;
+      setLocalMemo(textAreaValue);
+    },
+    500
+  );
 
   return (
     <>
@@ -47,6 +56,8 @@ const MapPage = () => {
         <textarea
           className="textarea textarea-primary w-full"
           placeholder="메모를 입력해주세요"
+          defaultValue={(localMemo as string) || ""}
+          onChange={handleChangeTextArea}
         ></textarea>
       </div>
     </>
