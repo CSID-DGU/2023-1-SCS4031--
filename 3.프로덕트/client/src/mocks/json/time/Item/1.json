@@ -1,0 +1,56 @@
+[
+  {
+    "id": 210,
+    "name": 210,
+    "address": "의정부동99-6서부나열 212호 (의정부동)",
+    "delivery_status": false,
+    "index_x": "127.0504666",
+    "index_y": "37.7359981",
+    "cluster_num": 6
+  },
+  {
+    "id": 211,
+    "name": 211,
+    "address": "의정부동99-6서부나열 212호 (의정부동)",
+    "delivery_status": false,
+    "index_x": "127.0504666",
+    "index_y": "37.7359981",
+    "cluster_num": 6
+  },
+  {
+    "id": 212,
+    "name": 212,
+    "address": "의정부동99-6서부나열 212호 (의정부동)",
+    "delivery_status": false,
+    "index_x": "127.0504666",
+    "index_y": "37.7359981",
+    "cluster_num": 6
+  },
+  {
+    "id": 213,
+    "name": 213,
+    "address": "의정부동99-6(의정부동,의정부지하상가) 서부 나열 217호 218호",
+    "delivery_status": false,
+    "index_x": "127.0504666",
+    "index_y": "37.7359981",
+    "cluster_num": 6
+  },
+  {
+    "id": 217,
+    "name": 217,
+    "address": "의정부동99-6서부나열 212호 (의정부동)",
+    "delivery_status": false,
+    "index_x": "127.0504666",
+    "index_y": "37.7359981",
+    "cluster_num": 6
+  },
+  {
+    "id": 218,
+    "name": 218,
+    "address": "의정부동99-6서부나열 212호 (의정부동)",
+    "delivery_status": false,
+    "index_x": "127.0504666",
+    "index_y": "37.7359981",
+    "cluster_num": 6
+  }
+]

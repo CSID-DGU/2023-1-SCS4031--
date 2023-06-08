@@ -1,0 +1,75 @@
+[
+  {
+    "id": 141,
+    "name": 141,
+    "address":
+    "경의로55번길22-6삼성빌라 삼성빌라B동102호(의정부동562-1,삼성)",
+    "delivery_status": false,
+    "index_x": "127.041916",
+    "index_y": "37.7339534",
+    "cluster_num": 1
+  },
+  {
+    "id": 142,
+    "name": 142,
+    "address": "경의로55번길22-6삼성빌라 B동 302호",
+    "delivery_status": false,
+    "index_x": "127.041916",
+    "index_y": "37.7339534",
+    "cluster_num": 1
+  },
+  {
+    "id": 143,
+    "name": 143,
+    "address": "의정부동562-4소망빌라 401호",
+    "delivery_status": false,
+    "index_x": "127.0423213",
+    "index_y": "37.7339469",
+    "cluster_num": 1
+  },
+  {
+    "id": 144,
+    "name": 144,
+    "address": "경의로55번길14-173층(의정부동)",
+    "delivery_status": false,
+    "index_x": "127.0417595",
+    "index_y": "37.7335763",
+    "cluster_num": 31
+  },
+  {
+    "id": 147,
+    "name": 147,
+    "address": "경의로55번길14-11 102호 (의정부동,신한빌라)",
+    "delivery_status": false,
+    "index_x": "127.0422317",
+    "index_y": "37.7338117",
+    "cluster_num": 1
+  },
+  {
+    "id": 148,
+    "name": 148,
+    "address": "의정부동562-9신한빌라102호(의정부동,신한빌라)",
+    "delivery_status": false,
+    "index_x": "127.0421754",
+    "index_y": "37.7338057",
+    "cluster_num": 1
+  },
+  {
+    "id": 149,
+    "name": 149,
+    "address": "의정부동562-9신한빌라 101호",
+    "delivery_status": false,
+    "index_x": "127.0421754",
+    "index_y": "37.7338057",
+    "cluster_num": 1
+  },
+  {
+    "id": 150,
+    "name": 150,
+    "address": "의정부동562-15 1층(의정부동)",
+    "delivery_status": false,
+    "index_x": "127.0416898",
+    "index_y": "37.7337891",
+    "cluster_num": 31
+  }
+]

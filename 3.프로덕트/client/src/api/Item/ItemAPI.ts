@@ -2,14 +2,14 @@ import axios from "axios";
 import HttpClient from "../service/HttpClient";
 
 const ItemAPI = {
-  getItemListByTime: async () => {
+  getItemListById: async (id?:string) => {
     try {
-      const path = "/item/time";
+      let path = `/item/${id ? id : 'time'}`;
       const response = await HttpClient.get(path);
 
       return response;
     } catch (e) {
-      console.error("error", e);
+      return [{}]
     }
   },
 };

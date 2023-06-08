@@ -6,8 +6,8 @@ const MainPage = () => {
   return (
     <>
       <div className={"w-full h-[180px]"}>
-        <ContentCard cardName={"오늘의 업무 바로가기"} cardType={"TODAY_AREA"}>
-          오늘의 업무 목록을 확인하세요.
+        <ContentCard cardName={"오늘의 업무 경로 확인하기"} cardType={"TODAY_MAP"}>
+          오늘의 업무 경로를 확인하세요
         </ContentCard>
       </div>
 

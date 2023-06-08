@@ -8,6 +8,10 @@ interface DeliveryPinProps {
 }
 
 const DeliveryPin = (props: DeliveryPinProps) => {
+    const handleOnClick = () => {
+
+    }
+
   return (
     <div className="indicator">
       <span className="indicator-item badge badge-secondary">

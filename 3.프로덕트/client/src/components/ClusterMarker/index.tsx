@@ -1,7 +1,7 @@
 import { Marker, NaverMap, useNavermaps } from "react-naver-maps";
 import React from "react";
 
-interface MapMarkerProps {
+interface ClusterMarkerProps {
   cluster_id: number;
   index_y: number;
   index_x: number;
@@ -9,10 +9,19 @@ interface MapMarkerProps {
   deliver_type: number;
   item_num: number;
   deliver_order: string;
+  visibleItemIndex: string;
+  setVisibleItemIndex:any;
 }
 
-const MapMarker = (props: MapMarkerProps) => {
+const ClusterMarker = (props: ClusterMarkerProps) => {
   const naverMaps = useNavermaps();
+
+  const handleOnClick = () => {
+      if(props.visibleItemIndex === props.deliver_order){
+          return props.setVisibleItemIndex('-1');
+      }
+      props.setVisibleItemIndex(props.deliver_order);
+  }
 
   return (
     <Marker
@@ -31,8 +40,9 @@ const MapMarker = (props: MapMarkerProps) => {
         <button class="btn">${props.deliver_order}</button>
       </div>`,
       }}
+      onClick={handleOnClick}
     />
   );
 };
 
-export default MapMarker;
+export default ClusterMarker;
