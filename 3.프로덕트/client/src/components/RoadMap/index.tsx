@@ -71,7 +71,7 @@ const RoadMap = ({
             />
           ))}
         { visibleItemIndex !== '-1' &&
-            itemListById &&
+            itemListById && typeof itemListById === typeof [] &&
           itemListById.map((data: any) => {
             return <ItemMarker key={data.id} item_id={data.id} index_y={data.index_y} index_x={data.index_x}/>
           })
