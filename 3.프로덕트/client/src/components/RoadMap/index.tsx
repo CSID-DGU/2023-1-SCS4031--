@@ -25,11 +25,6 @@ const RoadMap = ({
   const [{ mainDeliveryList }] = useMainDeliveryListByTime();
   const [{ subDeliveryList }] = useSubDeliveryListByTime();
 
-  useEffect(() => {
-    console.log(mainDeliveryList);
-    console.log(subDeliveryList);
-  });
-
   return (
     <MapDiv
       style={{
