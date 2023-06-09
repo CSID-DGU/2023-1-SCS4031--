@@ -2,34 +2,17 @@ import ItemTable from "../components/ItemTable";
 import ItemRow from "../components/ItemRow";
 import { useEffect, useState } from "react";
 import useItemListByTime from "../hooks/query/useItemListByTime";
+import {itemType} from "../type/itemType";
 
 const ItemRowPage = () => {
-  const [itemList] = useItemListByTime();
+  const [{itemListByTime}] = useItemListByTime();
 
   return (
     <>
       <ItemTable>
-        <ItemRow
-          itemName={"아이폰 1313133"}
-          itemCategory={"전자제품"}
-          mainAddress={"경기도 수원시 정자로"}
-          subAddress={"209동 403호"}
-          date={"23.03.31"}
-        />
-        <ItemRow
-          itemName={"아이폰 1313133"}
-          itemCategory={"전자제품"}
-          mainAddress={"경기도 수원시 정자로"}
-          subAddress={"209동 403호"}
-          date={"23.03.31"}
-        />
-        <ItemRow
-          itemName={"아이폰 1313133"}
-          itemCategory={"전자제품"}
-          mainAddress={"경기도 수원시 정자로"}
-          subAddress={"209동 403호"}
-          date={"23.03.31"}
-        />
+        {itemListByTime && itemListByTime.map((item: itemType) => {
+          return <ItemRow key={item.id} itemName={item.name} mainAddress={item.address} delivery_state={item.delivery_state}/>
+        })}
       </ItemTable>
     </>
   );

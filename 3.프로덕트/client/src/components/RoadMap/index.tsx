@@ -9,7 +9,10 @@ import {
 } from "react-naver-maps";
 import useMainDeliveryListByTime from "../../hooks/query/useMainDeliveryListByTime";
 import useSubDeliveryListByTime from "../../hooks/query/useSubDeliveryListByTime";
-import MapPin from "../MapMarker";
+import ClusterMarker from "../ClusterMarker";
+import useItemListByTime from "../../hooks/query/useItemListByTime";
+import useItemListById from "../../hooks/query/useItemListById";
+import ItemMarker from "../ItemMarker";
 
 interface RoadMapProps {
   isMainVisible: boolean;
@@ -21,9 +24,11 @@ const RoadMap = ({
   isSubVisible,
 }: RoadMapProps): JSX.Element => {
   const naverMaps = useNavermaps();
+  const [visibleItemIndex, setVisibleItemIndex] = useState<string>('-1');
 
   const [{ mainDeliveryList }] = useMainDeliveryListByTime();
   const [{ subDeliveryList }] = useSubDeliveryListByTime();
+  const [{ itemListById }] = useItemListById(visibleItemIndex);
 
   return (
     <MapDiv
@@ -39,7 +44,7 @@ const RoadMap = ({
         {isMainVisible &&
           mainDeliveryList &&
           mainDeliveryList.map((data: any) => (
-            <MapPin
+            <ClusterMarker
               key={data.cluster_id}
               cluster_id={data.cluster_id}
               index_y={data.index_y}
@@ -47,12 +52,13 @@ const RoadMap = ({
               deliver_type={data.deliver_type}
               item_num={data.item_num}
               deliver_order={data.deliver_order}
-            />
+              visibleItemIndex={visibleItemIndex}
+              setVisibleItemIndex={setVisibleItemIndex}/>
           ))}
         {isSubVisible &&
           subDeliveryList &&
           subDeliveryList.map((data: any) => (
-            <MapPin
+            <ClusterMarker
               key={data.cluster_id}
               cluster_id={data.cluster_id}
               index_y={data.index_y}
@@ -60,8 +66,16 @@ const RoadMap = ({
               deliver_type={data.deliver_type}
               item_num={data.item_num}
               deliver_order={data.deliver_order}
+              visibleItemIndex={visibleItemIndex}
+              setVisibleItemIndex={setVisibleItemIndex}
             />
           ))}
+        { visibleItemIndex !== '-1' &&
+            itemListById && typeof itemListById === "object" &&
+          itemListById.map((data: any) => {
+            return <ItemMarker key={data.id} item_id={data.id} index_y={data.index_y} index_x={data.index_x}/>
+          })
+        }
       </NaverMap>
     </MapDiv>
   );

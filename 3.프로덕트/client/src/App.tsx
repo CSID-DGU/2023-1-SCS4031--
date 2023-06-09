@@ -8,6 +8,7 @@ import AreaInfoPage from "./pages/AreaInfoPage";
 import { NavermapsProvider } from "react-naver-maps";
 import { worker } from "./mocks/browsers";
 import React from "react";
+import MemoListPage from "./pages/MemoListPage";
 
 function App() {
   worker.start();
@@ -21,6 +22,7 @@ function App() {
             <Route path="/map" element={<MapPage />} />
             <Route path="/item" element={<ItemRowPage />} />
             <Route path="/area" element={<AreaInfoPage />} />
+            <Route path="/memo" element={<MemoListPage />} />
           </Route>
         </Routes>
       </NavermapsProvider>

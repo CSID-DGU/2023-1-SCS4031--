@@ -42,7 +42,7 @@ const MapPage = () => {
         setMainVisible={setMainVisible}
         setSubVisible={setSubVisible}
       />
-      <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible} />
+      <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible}/>
       <div className={"w-full text-right mt-5 flex"}>
         <IntroductoryRemark />
         <button className={"btn btn-primary w-40"} onClick={handleOpenModal}>
