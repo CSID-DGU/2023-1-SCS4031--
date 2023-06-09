@@ -18,8 +18,8 @@ const MainPage = () => {
           </ContentCard>
         </div>
         <div className={"w-full h-full"}>
-          <ContentCard cardName={"지도 바로가기"} cardType={"TODAY_MAP"}>
-            지도 바로가기
+          <ContentCard cardName={"메모하기"} cardType={"MEMO_LIST"}>
+            저장할 메모
           </ContentCard>
         </div>
       </div>

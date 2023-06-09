@@ -16,6 +16,10 @@ const ContentCard = ({ cardName, cardType, children }: ContentCardProps) => {
       return navigate("/map");
     }
 
+    if (cardType === "MEMO_LIST") {
+      return navigate("/memo");
+    }
+
     return navigate("item");
   };
 
