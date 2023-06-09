@@ -10,8 +10,6 @@ import oneIndex from "./json/time/Item/1.json";
 import twoIndex from "./json/time/Item/2.json";
 import threeIndex from "./json/time/Item/3.json";
 
-
-const memoList = [];
 export const handlers = [
     rest.get("/item/time", async (req, res, ctx) => {
         await sleep(200);
@@ -72,8 +70,6 @@ export const handlers = [
 
         return res(ctx.status(200), ctx.json(threeIndex));
     }),
-
-
 
 ]
 
