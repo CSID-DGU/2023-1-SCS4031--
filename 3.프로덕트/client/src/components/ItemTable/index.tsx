@@ -9,12 +9,9 @@ const ItemTable = (props: ItemTableProps) => {
                 {/* head */}
                 <thead>
                 <tr>
-                    <th>
-                    </th>
+                    <th>배송완료여부</th>
                     <th>상품명</th>
                     <th>주소</th>
-                    <th>배송 일자</th>
-                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
