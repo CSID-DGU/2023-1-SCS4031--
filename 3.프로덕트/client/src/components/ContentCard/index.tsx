@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 interface ContentCardProps {
   cardName: string;
   cardType: string;
-  children: string;
+  children: string | any;
 }
 const ContentCard = ({ cardName, cardType, children }: ContentCardProps) => {
   const navigate = useNavigate();
@@ -32,8 +32,8 @@ const ContentCard = ({ cardName, cardType, children }: ContentCardProps) => {
     >
       <div className={"card-body"}>
         <div className={"card-title"}>{cardName}</div>
-        <div className={"flex items-center h-full"}>
-          <p>{children}</p>
+        <div className={"items-center h-full mt-5"}>
+          {children}
         </div>
       </div>
     </div>

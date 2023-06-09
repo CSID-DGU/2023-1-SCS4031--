@@ -1,13 +1,15 @@
+import MemoAddButton from "../common/layer/MemoPage/MemoAddButton";
+import {useState} from "react";
+
 const MemoListPage = () => {
+    const [memoCreateModalVisible, setMemoCreateModalVisible] = useState<boolean>(false);
+    const [memoContentModalVisible, setMemoContentModalVisible] = useState<boolean>(false);
 
     return(
         <>
-            <h1>MemoPage</h1>
-            <div className={"absolute end-8 bottom-11"}>
-                <button className="btn btn-circle btn-outline">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                </button>
-            </div>
+            {!memoContentModalVisible && !memoCreateModalVisible &&
+                <MemoAddButton />
+            }
         </>
 
     )
