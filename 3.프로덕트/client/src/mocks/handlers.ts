@@ -2,7 +2,7 @@ import { rest } from "msw";
 import timeItem from "./json/time/itemList.json";
 import timeMainList from "./json/time/mainList.json";
 import timeSubList from "./json/time/subList.json";
-import zeroIndex from "./json/time/Item/0.json";
+import eightIndex from "./json/time/Item/8.json";
 import thirtyNineIndex from "./json/time/Item/39.json";
 import fourNineIndex from "./json/time/Item/49.json";
 import oneSevenIndex from "./json/time/Item/17.json";
@@ -32,7 +32,7 @@ export const handlers = [
     rest.get("/item/0", async (req, res, ctx) => {
         await sleep(200);
 
-        return res(ctx.status(200), ctx.json(zeroIndex));
+        return res(ctx.status(200), ctx.json(eightIndex));
     }),
 
     rest.get("/item/39", async (req, res, ctx) => {
