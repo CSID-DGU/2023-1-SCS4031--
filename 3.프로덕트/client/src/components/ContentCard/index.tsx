@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import deliveryImage from "@public/Image/delivery.png";
 
 interface ContentCardProps {
   cardName: string;
