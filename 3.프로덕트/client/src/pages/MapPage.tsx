@@ -1,9 +1,9 @@
-import RoadMap from "../components/RoadMap";
 import { ChangeEvent, useState } from "react";
+import { debounce } from "lodash";
+import RoadMap from "../components/RoadMap";
 import IntroductoryRemark from "../components/IntroductoryRemark";
 import useModal from "../hooks/useModal";
 import MapCustomModal from "../components/Modal/MapCustomModal";
-import { debounce } from "lodash";
 import useLocalMemo from "../hooks/useLocalMemo";
 
 const MapPage = () => {
@@ -42,10 +42,10 @@ const MapPage = () => {
         setMainVisible={setMainVisible}
         setSubVisible={setSubVisible}
       />
-      <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible}/>
-      <div className={"w-full text-right mt-5 flex"}>
+      <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible} />
+      <div className="w-full text-right mt-5 flex">
         <IntroductoryRemark />
-        <button className={"btn btn-primary w-40"} onClick={handleOpenModal}>
+        <button className="btn btn-primary w-40" onClick={handleOpenModal}>
           옵션
         </button>
       </div>
@@ -58,7 +58,7 @@ const MapPage = () => {
           placeholder="메모를 입력해주세요"
           defaultValue={(localMemo as string) || ""}
           onChange={handleChangeTextArea}
-        ></textarea>
+        />
       </div>
     </>
   );

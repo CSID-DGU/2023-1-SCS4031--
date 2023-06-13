@@ -2,7 +2,7 @@ import { Marker, NaverMap, useNavermaps } from "react-naver-maps";
 import React from "react";
 
 interface ClusterMarkerProps {
-  cluster_id: number;
+  cluster_id: number | string;
   index_y: number;
   index_x: number;
 
@@ -10,34 +10,45 @@ interface ClusterMarkerProps {
   item_num: number;
   deliver_order: string;
   visibleItemIndex: string;
-  setVisibleItemIndex:any;
+  setVisibleItemIndex: any;
 }
 
-const ClusterMarker = (props: ClusterMarkerProps) => {
+const ClusterMarker = ({
+  visibleItemIndex,
+  deliver_order,
+  deliver_type,
+  cluster_id,
+  setVisibleItemIndex,
+  index_x,
+  index_y,
+  item_num,
+}: ClusterMarkerProps) => {
   const naverMaps = useNavermaps();
 
+  // eslint-disable-next-line consistent-return
   const handleOnClick = () => {
-      if(props.visibleItemIndex === props.deliver_order){
-          return props.setVisibleItemIndex('-1');
-      }
-      props.setVisibleItemIndex(props.deliver_order);
-  }
+    console.log('cluster_id', cluster_id, deliver_order)
+    if (visibleItemIndex === cluster_id) {
+      return setVisibleItemIndex("-1");
+    }
+    setVisibleItemIndex(cluster_id);
+  };
 
   return (
     <Marker
-      key={props.cluster_id}
-      position={new naverMaps.LatLng(props.index_y, props.index_x)}
-      title={props.deliver_order}
+      key={cluster_id}
+      position={new naverMaps.LatLng(index_y, index_x)}
+      title={deliver_order}
       icon={{
         content: `<div class="indicator">
       <span
           class="indicator-item badge ${
-            props.deliver_type === 1 ? " badge-primary" : " badge-accent"
+            deliver_type === 1 ? " badge-primary" : " badge-accent"
           }"
       >
-        ${props.item_num}
+        ${item_num}
       </span>
-        <button class="btn">${props.deliver_order}</button>
+        <button class="btn">${deliver_order}</button>
       </div>`,
       }}
       onClick={handleOnClick}

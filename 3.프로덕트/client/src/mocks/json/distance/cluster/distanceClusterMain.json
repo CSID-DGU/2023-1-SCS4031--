@@ -57,5 +57,5 @@
 
   {"cluster_id":46,"index_x":"37.7367242","index_y":"127.0442278","item_num":1,"item_list":"[28]","average_dist":"0.0","total_dist":"0.0","deliver_type":1,"deliver_order":64},
   {"cluster_id":45,"index_x":"37.7378134","index_y":"127.0445717","item_num":1,"item_list":"[22]","average_dist":"0.0","total_dist":"0.0","deliver_type":1,"deliver_order":59},
-  {"cluster_id":41,"index_x":"37.7375199","index_y":"127.0439747","item_num":3,"item_list":"[206, 207, 208]","average_dist":"8.505279501004226","total_dist":"25.51583850301268","deliver_type":1,"deliver_order":61},
+  {"cluster_id":41,"index_x":"37.7375199","index_y":"127.0439747","item_num":3,"item_list":"[206, 207, 208]","average_dist":"8.505279501004226","total_dist":"25.51583850301268","deliver_type":1,"deliver_order":61}
 ]

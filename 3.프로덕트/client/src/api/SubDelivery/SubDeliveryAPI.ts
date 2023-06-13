@@ -1,10 +1,11 @@
 import HttpClient from "../service/HttpClient";
 
 const SubDeliveryAPI = {
+  // eslint-disable-next-line consistent-return
   getListByItem: async () => {
     try {
-      const path = "/delivery/sub/time";
-      const response = HttpClient.get(path);
+      const path = "/cluster/time/sub";
+      const response = await HttpClient.get(path);
 
       return response;
     } catch (e) {
