@@ -7,6 +7,7 @@ export default ({ mode }) => {
   // process에서 타입에러가 뜨게된다.
   // @type/node를 설치해주자
   return {
+    base: "/",
     plugins: [
       react(),
       createHtmlPlugin({

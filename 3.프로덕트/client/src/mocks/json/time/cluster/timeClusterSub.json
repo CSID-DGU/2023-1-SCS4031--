@@ -1,0 +1,13 @@
+[
+  {"cluster_id":8,"index_x":"37.73566762","index_y":"127.0446533","item_num":10,"item_list":"[31, 32, 34, 36, 37, 38, 40, 41, 42, 43]","average_dist":"23.74467085996485","total_dist":"237.4467085996484","deliver_type":2,"deliver_order":65},
+  {"cluster_id":4,"index_x":"37.73574896","index_y":"127.0436807","item_num":7,"item_list":"[10, 11, 12, 13, 14, 15, 16]","average_dist":"9.54795719664739","total_dist":"66.83570037653173","deliver_type":2,"deliver_order":66},
+  {"cluster_id":6,"index_x":"37.73807135","index_y":"127.0437402","item_num":30,"item_list":"[18, 23, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 218, 220, 223, 229, 230, 231]","average_dist":"12.2570035715966","total_dist":"367.7101071478981","deliver_type":2,"deliver_order":60},
+  {"cluster_id":42,"index_x":"37.73797","index_y":"127.04498","item_num":10,"item_list":"[209, 210, 211, 212, 213, 214, 215, 216, 217, 227]","average_dist":"0.0","total_dist":"0.0","deliver_type":2,"deliver_order":58},
+  {"cluster_id":7,"index_x":"37.73696228","index_y":"127.0440813","item_num":6,"item_list":"[24, 25, 26, 27, 29, 30]","average_dist":"8.256566576200855","total_dist":"49.53939945720514","deliver_type":2,"deliver_order":63},
+  {"cluster_id":21,"index_x":"37.73452072","index_y":"127.0386514","item_num":5,"item_list":"[86, 87, 88, 90, 96]","average_dist":"21.52508529500109","total_dist":"107.6254264750054","deliver_type":2,"deliver_order":11},
+  {"cluster_id":1,"index_x":"37.73508731","index_y":"127.0411847","item_num":8,"item_list":"[2, 113, 114, 115, 119, 120, 121, 123]","average_dist":"21.56548210346755","total_dist":"172.5238568277404","deliver_type":2,"deliver_order":22},
+  {"cluster_id":34,"index_x":"37.73389848","index_y":"127.0417696","item_num":13,"item_list":"[136, 137, 138, 139, 140, 141, 143, 149, 150, 151, 152, 153, 222]","average_dist":"28.80940653000385","total_dist":"374.5222848900501","deliver_type":2,"deliver_order":26},
+  {"cluster_id":35,"index_x":"37.73383888","index_y":"127.0423583","item_num":6,"item_list":"[142, 144, 145, 146, 147, 148]","average_dist":"17.26597631338778","total_dist":"103.5958578803267","deliver_type":2,"deliver_order":28},
+  {"cluster_id":12,"index_x":"37.73445011","index_y":"127.0457521","item_num":8,"item_list":"[51, 52, 54, 55, 56, 57, 59, 63]","average_dist":"19.14902426342794","total_dist":"153.1921941074235","deliver_type":2,"deliver_order":50},
+  {"cluster_id":37,"index_x":"37.73632763","index_y":"127.0451871","item_num":12,"item_list":"[159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 171]","average_dist":"5.234861392414682","total_dist":"62.81833670897618","deliver_type":2,"deliver_order":54}
+]

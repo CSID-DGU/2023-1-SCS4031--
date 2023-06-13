@@ -1,20 +1,25 @@
 import ItemTable from "../components/ItemTable";
 import ItemRow from "../components/ItemRow";
-import { useEffect, useState } from "react";
-import useItemListByTime from "../hooks/query/useItemListByTime";
-import {itemType} from "../type/itemType";
+import { itemType } from "../type/itemType";
+import useTotalItemList from "../hooks/query/useTotalItemList";
 
 const ItemRowPage = () => {
-  const [{itemListByTime}] = useItemListByTime();
+  const [{ itemList }] = useTotalItemList();
 
   return (
-    <>
-      <ItemTable>
-        {itemListByTime && itemListByTime.map((item: itemType) => {
-          return <ItemRow key={item.id} itemName={item.name} mainAddress={item.address} delivery_state={item.delivery_state}/>
+    <ItemTable>
+      {itemList &&
+        itemList.map((item: itemType) => {
+          return (
+            <ItemRow
+              key={item.id}
+              itemName={item.name}
+              mainAddress={item.address}
+              delivery_state={item.delivery_state}
+            />
+          );
         })}
-      </ItemTable>
-    </>
+    </ItemTable>
   );
 };
 

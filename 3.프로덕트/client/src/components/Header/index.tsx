@@ -1,7 +1,5 @@
 import DefaultProfileImg from "/Image/DefaultProfileImg.png";
-import { useNavigate, useNavigation } from "react-router-dom";
-import * as events from "events";
-import { EventHandler } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -18,12 +16,12 @@ const Header = () => {
         return navigate("/map");
       case "지역 목록":
         return navigate("/area");
-      case "상품 리스트":
+      case "배송 목록":
         return navigate("/item");
       case "메모":
         return navigate("/memo");
       default:
-        return;
+        return null;
     }
   };
 
@@ -58,11 +56,11 @@ const Header = () => {
             <li>
               <a>지도</a>
             </li>
+            {/*<li>*/}
+            {/*  <a>메모</a>*/}
+            {/*</li>*/}
             <li>
-              <a>메모</a>
-            </li>
-            <li>
-              <a>상품 리스트</a>
+              <a>배송 목록</a>
             </li>
           </ul>
         </div>
@@ -98,23 +96,6 @@ const Header = () => {
               <img src={DefaultProfileImg} alt={"프로필 이미지"} />
             </div>
           </label>
-          {/*<ul*/}
-          {/*  tabIndex={0}*/}
-          {/*  className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"*/}
-          {/*>*/}
-          {/*  <li>*/}
-          {/*    <a className="justify-between">*/}
-          {/*      Profile*/}
-          {/*      <span className="badge">New</span>*/}
-          {/*    </a>*/}
-          {/*  </li>*/}
-          {/*  <li>*/}
-          {/*    <a>Settings</a>*/}
-          {/*  </li>*/}
-          {/*  <li>*/}
-          {/*    <a>Logout</a>*/}
-          {/*  </li>*/}
-          {/*</ul>*/}
         </div>
       </div>
     </div>

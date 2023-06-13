@@ -1,4 +1,5 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 interface ContentCardProps {
   cardName: string;
@@ -7,7 +8,17 @@ interface ContentCardProps {
 }
 const ContentCard = ({ cardName, cardType, children }: ContentCardProps) => {
   const navigate = useNavigate();
+  const [imageUrl, setImageUrl] = useState<string>("/Image/road.png");
 
+  useEffect(() => {
+    if (cardType === "TODAY_MAP") {
+      setImageUrl("primary");
+    } else {
+      setImageUrl(`accent`);
+    }
+  }, [imageUrl]);
+
+  // eslint-disable-next-line @typescript-eslint/no-shadow
   const handleClickEvent = (cardType: string) => {
     if (cardType === "TODAY_AREA") {
       return navigate("/area");
@@ -19,22 +30,19 @@ const ContentCard = ({ cardName, cardType, children }: ContentCardProps) => {
     if (cardType === "MEMO_LIST") {
       return navigate("/memo");
     }
-
     return navigate("item");
   };
 
   return (
     <div
-      className={`card h-full w-full bg-primary shadow-xl text-white`}
+      className={`card h-full w-full shadow-xl text-white bg-${imageUrl} bg-no-repeat bg-center bg-cover`}
       onClick={() => {
         handleClickEvent(cardType);
       }}
     >
-      <div className={"card-body"}>
-        <div className={"card-title"}>{cardName}</div>
-        <div className={"items-center h-full mt-5"}>
-          {children}
-        </div>
+      <div className="card-body">
+        <div className="card-title">{cardName}</div>
+        <div className="items-center h-full mt-5">{children}</div>
       </div>
     </div>
   );

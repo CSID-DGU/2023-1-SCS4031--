@@ -1,15 +1,16 @@
+import {ChangeEvent, useEffect, useState} from "react";
+import { debounce } from "lodash";
 import RoadMap from "../components/RoadMap";
-import { ChangeEvent, useState } from "react";
 import IntroductoryRemark from "../components/IntroductoryRemark";
 import useModal from "../hooks/useModal";
 import MapCustomModal from "../components/Modal/MapCustomModal";
-import { debounce } from "lodash";
 import useLocalMemo from "../hooks/useLocalMemo";
 
 const MapPage = () => {
   const [mainVisible, setMainVisible] = useState(true);
   const [subVisible, setSubVisible] = useState(true);
   const [localMemo, setLocalMemo] = useLocalMemo();
+  const [standard, setStandard] = useState<string>("time");
   const { openModal } = useModal();
 
   const handleOpenModal = () => {
@@ -21,6 +22,7 @@ const MapPage = () => {
           subVisible={subVisible}
           setMainVisible={setMainVisible}
           setSubVisible={setSubVisible}
+          setStandard={setStandard}
         />
       ),
     });
@@ -41,11 +43,16 @@ const MapPage = () => {
         subVisible={subVisible}
         setMainVisible={setMainVisible}
         setSubVisible={setSubVisible}
+        setStandard={setStandard}
       />
-      <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible}/>
-      <div className={"w-full text-right mt-5 flex"}>
+      <RoadMap
+        isMainVisible={mainVisible}
+        isSubVisible={subVisible}
+        standard={standard}
+      />
+      <div className="w-full text-right mt-5 flex">
         <IntroductoryRemark />
-        <button className={"btn btn-primary w-40"} onClick={handleOpenModal}>
+        <button className="btn btn-primary w-40" onClick={handleOpenModal}>
           옵션
         </button>
       </div>
@@ -58,7 +65,7 @@ const MapPage = () => {
           placeholder="메모를 입력해주세요"
           defaultValue={(localMemo as string) || ""}
           onChange={handleChangeTextArea}
-        ></textarea>
+        />
       </div>
     </>
   );

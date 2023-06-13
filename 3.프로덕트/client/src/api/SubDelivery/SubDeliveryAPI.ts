@@ -3,12 +3,34 @@ import HttpClient from "../service/HttpClient";
 const SubDeliveryAPI = {
   getListByItem: async () => {
     try {
-      const path = "/delivery/sub/time";
-      const response = HttpClient.get(path);
+      const path = "/cluster/time/sub";
+      const response = await HttpClient.get(path);
 
       return response;
     } catch (e) {
-      console.error(e);
+      return console.error(e);
+    }
+  },
+
+  getListByDistance: async () => {
+    try {
+      const path = "/cluster/distance/sub";
+      const response = await HttpClient.get(path);
+
+      return response;
+    } catch (e) {
+      return console.error(e);
+    }
+  },
+
+  getListByRatio: async () => {
+    try {
+      const path = "/cluster/ratio/sub";
+      const response = await HttpClient.get(path);
+
+      return response;
+    } catch (e) {
+      return console.error(e);
     }
   },
 };
