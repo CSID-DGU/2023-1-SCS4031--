@@ -14,7 +14,7 @@ const ContentCard = ({ cardName, cardType, children }: ContentCardProps) => {
     if (cardType === "TODAY_MAP") {
       setImageUrl("primary");
     } else {
-      setImageUrl(`[url('/Image/delivery.png')]`);
+      setImageUrl(`accent`);
     }
   }, [imageUrl]);
 
