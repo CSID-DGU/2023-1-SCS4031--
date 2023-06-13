@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import {
   NaverMap,
-  Marker,
   Container as MapDiv,
-  useNavermaps,
 } from "react-naver-maps";
-import DeliveryPin from "../DeliveryPin";
 
-import useMainDeliveryListByTime from "../../hooks/query/useMainDeliveryListByTime";
-import useSubDeliveryListByTime from "../../hooks/query/useSubDeliveryListByTime";
 import ClusterMarker from "../ClusterMarker";
 import useItemListByTime from "../../hooks/query/useItemListByTime";
 import ItemMarker from "../ItemMarker";
+import useMainDeliveryListByStandard from "../../hooks/query/useMainDeliveryListByStandard";
+import useSubDeliveryListByStandard from "../../hooks/query/useSubDeliveryListByStandard";
 
 interface RoadMapProps {
   isMainVisible: boolean;
@@ -26,9 +23,13 @@ const RoadMap = ({
 }: RoadMapProps): JSX.Element => {
   const [visibleItemIndex, setVisibleItemIndex] = useState<string>("-1");
 
-  const [{ mainDeliveryList }] = useMainDeliveryListByTime();
-  const [{ subDeliveryList }] = useSubDeliveryListByTime();
+  const [{ mainDeliveryList }] = useMainDeliveryListByStandard(standard);
+  const [{ subDeliveryList }] = useSubDeliveryListByStandard(standard);
   const [{ itemListById }] = useItemListByTime(visibleItemIndex);
+
+  useEffect(() => {
+    console.log(mainDeliveryList);
+  }, [standard]);
 
   return (
     <MapDiv
