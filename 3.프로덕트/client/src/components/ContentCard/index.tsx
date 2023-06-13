@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import deliveryImage from "@public/Image/delivery.png";
 
 interface ContentCardProps {
   cardName: string;
@@ -14,7 +15,7 @@ const ContentCard = ({ cardName, cardType, children }: ContentCardProps) => {
     if (cardType === "TODAY_MAP") {
       setImageUrl("primary");
     } else {
-      setImageUrl(`[url('../../../public/Image/delivery.png')]`);
+      setImageUrl(`[url('/Image/delivery.png')]`);
     }
   }, [imageUrl]);
 
