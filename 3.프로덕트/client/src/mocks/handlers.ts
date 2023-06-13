@@ -17,6 +17,8 @@ export const handlers = [
         return res(ctx.status(200), ctx.json(timeItem));
     }),
 
+
+
     rest.get("/delivery/main/time", async (req, res, ctx) => {
         await sleep(200);
 

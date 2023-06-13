@@ -19,7 +19,7 @@ const Header = () => {
       case "지역 목록":
         return navigate("/area");
       case "상품 리스트":
-        return navigate("/item");
+        return navigate("/cluster");
       case "메모":
         return navigate("/memo");
       default:
