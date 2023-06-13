@@ -57,7 +57,7 @@ const MapCustomModal = (props: MapCustomModalProps) => {
               <select className="select select-primary w-full max-w-xs" onChange={handleClickEvent}>
                 <option>거리</option>
                 <option>업무량</option>
-                <option>업무강도</option>
+                <option>시간</option>
               </select>
             </div>
             <div className="modal-action">
