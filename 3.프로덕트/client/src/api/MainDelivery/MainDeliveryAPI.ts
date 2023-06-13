@@ -13,6 +13,28 @@ const MainDeliveryAPI = {
       console.error(e);
     }
   },
+
+  getListByDistance: async () => {
+    try {
+      const path = "/cluster/distance/main";
+      const response = await HttpClient.get(path);
+
+      return response;
+    } catch (e) {
+      return console.error(e);
+    }
+  },
+
+  getListByRatio: async () => {
+    try {
+      const path = "/cluster/ratio/main";
+      const response = await HttpClient.get(path);
+
+      return response;
+    } catch (e) {
+      return console.error(e);
+    }
+  },
 };
 
 export default MainDeliveryAPI;

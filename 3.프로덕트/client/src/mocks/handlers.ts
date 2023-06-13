@@ -5,9 +5,14 @@ import ratioClusterMain from "./json/ratio/cluster/ratioClusterMain.json";
 import ratioClusterSub from "./json/ratio/cluster/ratioClusterSub.json";
 import distanceClusterMain from "./json/distance/cluster/distanceClusterMain.json";
 import distanceClusterSub from "./json/distance/cluster/distanceClusterSub.json";
+import itemList from "./json/itemList.json";
 
 // eslint-disable-next-line import/prefer-default-export
 export const handlers = [
+  rest.get("/item/all", (req, res, ctx) => {
+    return res(ctx.status(200), ctx.json(itemList));
+  }),
+
   rest.get("/cluster/time/main", async (req, res, ctx) => {
     return res(ctx.status(200), ctx.json(timeClusterMain));
   }),

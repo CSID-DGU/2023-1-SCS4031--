@@ -1,4 +1,6 @@
 export const QueryKey = {
+  TOTAL_ITEM_LIST: "totalItemList",
+
   MAIN_DELIVERY_LIST_BY_TIME: "mainDeliveryListByTime",
   SUB_DELIVERY_LIST_BY_TIME: "subDeliveryListByTime",
   ITEM_LIST_BY_TIME: "itemListByTIME",

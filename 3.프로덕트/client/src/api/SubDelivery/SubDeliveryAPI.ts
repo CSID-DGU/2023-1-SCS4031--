@@ -1,7 +1,6 @@
 import HttpClient from "../service/HttpClient";
 
 const SubDeliveryAPI = {
-  // eslint-disable-next-line consistent-return
   getListByItem: async () => {
     try {
       const path = "/cluster/time/sub";
@@ -9,7 +8,29 @@ const SubDeliveryAPI = {
 
       return response;
     } catch (e) {
-      console.error(e);
+      return console.error(e);
+    }
+  },
+
+  getListByDistance: async () => {
+    try {
+      const path = "/cluster/distance/sub";
+      const response = await HttpClient.get(path);
+
+      return response;
+    } catch (e) {
+      return console.error(e);
+    }
+  },
+
+  getListByRatio: async () => {
+    try {
+      const path = "/cluster/ratio/sub";
+      const response = await HttpClient.get(path);
+
+      return response;
+    } catch (e) {
+      return console.error(e);
     }
   },
 };

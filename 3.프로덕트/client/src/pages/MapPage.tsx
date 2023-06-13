@@ -10,6 +10,7 @@ const MapPage = () => {
   const [mainVisible, setMainVisible] = useState(true);
   const [subVisible, setSubVisible] = useState(true);
   const [localMemo, setLocalMemo] = useLocalMemo();
+  const [standard, setStandard] = useState<string>("time");
   const { openModal } = useModal();
 
   const handleOpenModal = () => {
@@ -42,7 +43,7 @@ const MapPage = () => {
         setMainVisible={setMainVisible}
         setSubVisible={setSubVisible}
       />
-      <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible} />
+      <RoadMap isMainVisible={mainVisible} isSubVisible={subVisible} standard={standard}/>
       <div className="w-full text-right mt-5 flex">
         <IntroductoryRemark />
         <button className="btn btn-primary w-40" onClick={handleOpenModal}>

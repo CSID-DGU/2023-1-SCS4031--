@@ -16,11 +16,13 @@ import ItemMarker from "../ItemMarker";
 interface RoadMapProps {
   isMainVisible: boolean;
   isSubVisible: boolean;
+  standard: string;
 }
 
 const RoadMap = ({
   isMainVisible,
   isSubVisible,
+  standard,
 }: RoadMapProps): JSX.Element => {
   const [visibleItemIndex, setVisibleItemIndex] = useState<string>("-1");
 
@@ -73,7 +75,7 @@ const RoadMap = ({
           itemListById &&
           typeof itemListById === "object" &&
           Object.values(itemListById.default).map((data: any) => {
-            console.log(data)
+            console.log(data);
             return (
               <ItemMarker
                 key={data.id}
