@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  NaverMap,
-  Container as MapDiv,
-} from "react-naver-maps";
+import { NaverMap, Container as MapDiv } from "react-naver-maps";
 
 import ClusterMarker from "../ClusterMarker";
 import useItemListByTime from "../../hooks/query/useItemListByTime";
@@ -16,20 +13,33 @@ interface RoadMapProps {
   standard: string;
 }
 
-const RoadMap = ({
-  isMainVisible,
-  isSubVisible,
-  standard,
-}: RoadMapProps): JSX.Element => {
+const RoadMap = ({ isMainVisible, isSubVisible, standard }: RoadMapProps): JSX.Element => {
   const [visibleItemIndex, setVisibleItemIndex] = useState<string>("-1");
 
   const [{ mainDeliveryList }] = useMainDeliveryListByStandard(standard);
   const [{ subDeliveryList }] = useSubDeliveryListByStandard(standard);
   const [{ itemListById }] = useItemListByTime(visibleItemIndex);
 
+  const [myLocation, setMyLocation] = useState<{ latitude: number; longitude: number } | string>(
+    ""
+  );
+
   useEffect(() => {
-    console.log(mainDeliveryList);
-  }, [standard]);
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setMyLocation({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        });
+      });
+    } else {
+      window.alert("현재위치를 알수 없습니다.");
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log(myLocation);
+  }, [myLocation]);
 
   return (
     <MapDiv
@@ -38,10 +48,7 @@ const RoadMap = ({
         height: "500px",
       }}
     >
-      <NaverMap
-        defaultCenter={{ lat: 37.7357597, lng: 127.047849 }}
-        defaultZoom={16}
-      >
+      <NaverMap defaultCenter={{ lat: 37.7357297, lng: 127.044549 }} defaultZoom={16}>
         {isMainVisible &&
           mainDeliveryList &&
           mainDeliveryList.map((data: any) => (
@@ -76,7 +83,6 @@ const RoadMap = ({
           itemListById &&
           typeof itemListById === "object" &&
           Object.values(itemListById.default).map((data: any) => {
-            console.log(data);
             return (
               <ItemMarker
                 key={data.id}

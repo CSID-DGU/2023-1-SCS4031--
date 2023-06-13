@@ -27,7 +27,6 @@ const ClusterMarker = ({
 
   // eslint-disable-next-line consistent-return
   const handleOnClick = () => {
-    console.log('cluster_id', cluster_id, deliver_order)
     if (visibleItemIndex === cluster_id) {
       return setVisibleItemIndex("-1");
     }

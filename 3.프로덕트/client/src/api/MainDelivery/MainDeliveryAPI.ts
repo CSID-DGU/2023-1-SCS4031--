@@ -6,7 +6,6 @@ const MainDeliveryAPI = {
     try {
       const path = "/cluster/time/main";
       const response = await HttpClient.get(path);
-      console.log(response);
 
       return response;
     } catch (e) {
